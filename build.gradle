@@ -8,6 +8,12 @@ group = 'com.ticketya'
 version = '0.0.1'
 sourceCompatibility = '17'
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.ticketya.ticketsweb.TicketYaApiApplication'
+    }
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
@@ -41,13 +47,4 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
-}
-
-jar {
-  manifest {
-    attributes(
-      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-      'Main-Class': 'com.ticketya.ticketsweb.controllers.user.UserController'
-    )
-  }
 }
