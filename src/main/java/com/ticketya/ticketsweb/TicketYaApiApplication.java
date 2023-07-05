@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 @SpringBootApplication
 public class TicketYaApiApplication {
-
+	//public
 	public static void main(String[] args) {
 		SpringApplication.run(TicketYaApiApplication.class, args);
 	}
