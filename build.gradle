@@ -47,7 +47,7 @@ jar {
   manifest {
     attributes(
       'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
-      'Main-Class': 'com.ticketya.ticketsweb.TicketYaApiApplication.java'
+      'Main-Class': 'com.ticketya.ticketsweb.controllers.user.UserController'
     )
   }
 }
